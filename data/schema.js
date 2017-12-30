@@ -6,7 +6,20 @@ import mocks from './mocks'
 
 const typeDefs = `
 type Query {
-  testString: String
+  allGifts: [Gift]
+}
+
+type Gift {
+  id: Int
+  name: String
+  note: String
+  status: String
+}
+
+type Author {
+  id: Int
+  name: String
+  gifts: [Gift]
 }
 `;
 

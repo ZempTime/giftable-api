@@ -1,7 +1,11 @@
 import casual from 'casual';
 
 const mocks = {
-  String: () => 'It works!',
+  allGifts: () => new MockList([2,6]),
+  Gift: () => ({
+    name: casual.title,
+    note: casual.description
+  }),
 }
 
 export default mocks;
